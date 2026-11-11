@@ -26,7 +26,7 @@ header.top.hide{transform:translateY(-100%)}
 header.top.stuck{background:rgba(0,0,0,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
 header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
 .brand{display:flex;align-items:center}
-.brand img{height:24px;width:auto}
+.brand img{height:16px;width:auto}
 nav{display:flex;align-items:center;gap:30px}
 nav a.l{font-size:14px;font-weight:500;color:var(--muted);transition:color .25s}
 nav a.l:hover{color:var(--ink)}
@@ -65,12 +65,12 @@ nav a.cta:hover{background:#fff}
 /* sections */
 section{padding:110px 0}
 .label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-h2{font-size:clamp(30px,4vw,46px);margin-bottom:16px}
+h2{font-size:clamp(38px,5.4vw,64px);color:#fff;margin-bottom:12px}
 .sub{color:var(--muted);max-width:560px;font-size:17px}
 
 /* about */
 .about{border-top:1px solid var(--line)}
-.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;margin-top:10px}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;margin-top:36px}
 .about-grid p{color:var(--muted);font-size:17px;margin-bottom:16px}
 .about-grid p strong{color:var(--ink);font-weight:600}
 
@@ -100,8 +100,8 @@ h2{font-size:clamp(30px,4vw,46px);margin-bottom:16px}
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
 .ecard{display:flex;align-items:center;gap:18px;padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;transition:border-color .35s}
 .ecard:hover{border-color:rgba(5,252,126,.5)}
-.logo-box{flex:none;width:128px;height:64px;display:grid;place-items:center}
-.logo-box img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.logo-box{flex:none;width:128px;height:64px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo-box img{max-width:100%;max-height:52px;width:auto;height:auto;object-fit:contain}
 .logo-box img[src*="ictfromabc"]{border-radius:6px}
 .ecard h3{font-size:15px;line-height:1.3;margin-bottom:2px}
 .ecard p{font-size:13px;color:var(--muted);line-height:1.45}
@@ -149,14 +149,13 @@ h2{font-size:clamp(30px,4vw,46px);margin-bottom:16px}
 
 /* contact */
 .contact{background:var(--bg);border-top:1px solid rgba(5,252,126,.28);border-radius:44px 44px 0 0;background-image:radial-gradient(ellipse 60% 70% at 50% 0,rgba(5,252,126,.14),transparent 70%)}
-.contact h2{font-size:clamp(34px,5.2vw,64px)}
 .mail{display:inline-block;font-size:clamp(18px,2.8vw,30px);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:3px;margin:28px 0 34px;word-break:break-all;transition:color .25s}
 .mail:hover{color:var(--accent)}
 .links{display:flex;gap:12px;flex-wrap:wrap}
 .links a{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:15px;font-weight:500;transition:.3s var(--ease)}
 .links a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);transform:translateY(-3px)}
 footer{background:var(--bg);color:#6d706c;font-size:14px;padding:0 0 28px}
-footer .flogo{height:14px;width:auto;opacity:.85}
+footer .flogo{height:12px;width:auto;opacity:.85}
 footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);padding-top:24px}
 
 @media(max-width:860px){
@@ -175,7 +174,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
 <header class="top" id="bar">
   <div class="wrap">
-    <a href="#home" class="brand" aria-label="Monfy"><img src="images/monfy-logo.png" alt="Monfy" width="226" height="24"></a>
+    <a href="#home" class="brand" aria-label="Monfy"><img src="images/monfy-logo.png" alt="Monfy" width="150" height="16"></a>
     <nav>
       <a class="l" href="#about">About</a><a class="l" href="#services">Services</a><a class="l" href="#education">Education</a><a class="l" href="#work">Work</a>
       <a class="cta" href="#contact">Contact</a>
@@ -202,8 +201,8 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
   <section id="about" class="about">
     <div class="wrap">
-      <div class="label rv">About</div>
-      <h2 class="rv" style="--d:.05s">Student by day,<br>builder by default.</h2>
+      <h2 class="rv">About</h2>
+      <p class="sub rv" style="--d:.05s">Student by day, builder by default.</p>
       <div class="about-grid">
         <p class="rv" style="--d:.1s">I'm <strong>Danidu Sankalpa</strong>, a student at <strong>Ku/ Parakramabahu Central College</strong> (National School) in the A/L Technology stream. I also study with <strong>ictfromabc</strong> and at <strong>EQuest Institute of Higher Education</strong>.</p>
         <p class="rv" style="--d:.18s">Outside class I build real products: a study app for Sri Lankan students, a Sinhala-friendly keyboard and an online clothing store.</p>
@@ -213,8 +212,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
   <section id="services" class="services">
     <div class="wrap">
-      <div class="label rv">What I do</div>
-      <h2 class="rv" style="--d:.05s">Services</h2>
+      <h2 class="rv">Services</h2>
       <p class="sub rv" style="--d:.1s">The two things I spend most of my time on.</p>
       <div class="svc-grid">
         <div class="svc rv">
@@ -237,8 +235,8 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
   <section id="education">
     <div class="wrap">
-      <div class="label rv">Education</div>
-      <h2 class="rv" style="--d:.05s">Where I learn</h2>
+      <h2 class="rv">Education</h2>
+      <p class="sub rv" style="--d:.05s">Where I learn</p>
       <div class="edu-grid">
         <div class="ecard rv"><div class="logo-box"><img src="images/school-logo.webp" alt="Parakramabahu Central College"></div><div><h3>Parakramabahu Central College</h3><p>National School, Polgahawela</p></div></div>
         <div class="ecard rv"><div class="logo-box"><img src="images/ictfromabc-logo.webp" alt="ictfromabc"></div><div><h3>ictfromabc</h3><p>Student, ICT programme</p></div></div>
@@ -249,13 +247,12 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
   <section id="work" class="work">
     <div class="wrap">
-      <div class="label rv">Selected work</div>
-      <h2 class="rv" style="--d:.05s">Things I've built</h2>
-      <p class="sub rv" style="--d:.1s">Two mobile apps and an online store, designed and developed by me.</p>
+      <h2 class="rv">Selected work</h2>
+      <p class="sub rv" style="--d:.1s">Things I've built. Two mobile apps and an online store, designed and developed by me.</p>
 
       <article class="proj">
         <div class="info rv">
-          <div class="n">01 — Mobile app</div>
+          <div class="n">Mobile App</div>
           <h3>Vibhagaya</h3>
           <p>Sri Lanka's all-in-one study application. Past papers, notes, video tutorials and MCQ practice in one place.</p>
           <ul class="tags"><li>Past &amp; model papers</li><li>Notes</li><li>Video tutorials</li><li>MCQ practice</li></ul>
@@ -272,7 +269,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
       <article class="proj flip">
         <div class="info rv">
-          <div class="n">02 — Keyboard app</div>
+          <div class="n">Keyboard App</div>
           <h3>Ceylon Keyboard</h3>
           <p>A keyboard that types in English, Sinhala and Singlish, with themes, news and a quick notepad built in.</p>
           <ul class="tags"><li>English</li><li>සිංහල</li><li>Singlish</li><li>Themes</li></ul>
@@ -286,7 +283,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
       <article class="proj">
         <div class="info rv">
-          <div class="n">03 — Website</div>
+          <div class="n">Website</div>
           <h3>RIVENZ</h3>
           <p>A modern online clothing store with island-wide delivery, secure payment, live chat and order tracking.</p>
           <ul class="tags"><li>E-commerce</li><li>Live chat</li><li>Order tracking</li><li>Responsive</li></ul>
@@ -305,9 +302,8 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
 
   <section id="contact" class="contact">
     <div class="wrap">
-      <div class="label rv">Contact</div>
-      <h2 class="rv" style="--d:.05s">Let's build something<br>together.</h2>
-      <p class="sub rv" style="--d:.1s">Have an app, a website or an idea? Send me a message.</p>
+      <h2 class="rv">Contact</h2>
+      <p class="sub rv" style="--d:.1s">Let's build something together. Have an app, a website or an idea? Send me a message.</p>
       <a class="mail rv" style="--d:.15s" href="mailto:danidusankalpa.info@gmail.com">danidusankalpa.info@gmail.com</a>
       <div class="links rv" style="--d:.2s">
         <a href="https://github.com/danidu-sankalpa" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>GitHub · danidu-sankalpa</a>
@@ -318,7 +314,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-
   </section>
 </main>
 
-<footer><div class="wrap"><a href="#home" aria-label="Monfy"><img class="flogo" src="images/monfy-logo.png" alt="Monfy" width="131" height="14"></a><span>© 2026 Danidu Sankalpa, Sri Lanka</span></div></footer>
+<footer><div class="wrap"><a href="#home" aria-label="Monfy"><img class="flogo" src="images/monfy-logo.png" alt="Monfy" width="113" height="12"></a><span>© 2026 Danidu Sankalpa, Sri Lanka</span></div></footer>
 
 <script>
 const bar=document.getElementById('bar');
